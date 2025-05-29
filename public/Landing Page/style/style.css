@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: transparent;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    padding: 0rem 6.5rem;
+}
+
+header .logo {
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: orange;
+    text-decoration: underline;
+}
+
+.nav-bar a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #FFE3CA;
+    margin-right: 1.9rem;
+    position: relative;
+    transition: .3s;
+}
+
+.nav-bar a:hover {
+    color: orange;
+}
+
+/* .nav-bar a::before {
+    content: '';
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    background-color: orange;
+} */
+
+
+.nav-bar a::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    background-color: orange;
+    transition: .3s;
+}
+
+.nav-bar a:hover::after {
+    width: 100%;
+}
+
+.container {
+    position: relative;
+}
+
+.container img {
+    max-width: 100%;
+    height: auto;
+    background-size: cover;
+    filter: brightness(50%);
+}
+
+.container .content {
+    width: 800px;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    padding: 0rem 6.5rem;
+}
+
+.content h1 {
+    font-size: 4rem;
+    color: #FFE3CA;
+}
+
+.content h3 {
+    font-size: 2.5rem;
+    color: #EE99C2;
+}
+
+.content p {
+    font-size: 1.5rem;
+    color: #FFE3CA;
+}
+
+.action-button {
+    padding-top: 1.7rem;
+
+}
+
+.action-button button {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #FFE3CA;
+    background: transparent;
+    margin-right: 2.5rem;
+    padding: 2.0rem 3.6rem;
+    border-radius: 9px;
+    transition: .5s;
+}
+
+.action-button button:hover {
+    background-color: #0A204B;
+    color: orange;
+}
+
+@media screen and (max-width:1024px) {
+    .container .content {
+        top: 30%;
+    }
+
+    .content h1 {
+        font-size: 3.5rem;
+    }
+
+    .content h3 {
+        font-size: 2.1rem;
+    }
+
+    .content p {
+        font-size: 1.2rem;
+    }
+
+    .action-button {
+        padding-top: 1.5rem;
+
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    header .logo {
+        font-size: ;
+        justify-content: start;
+        padding: 0rem 1.5rem;
+    }
+
+    .nav-bar a {
+        display: none;
+    }
+
+    .container img {
+        height: 100vh;
+    }
+
+    .container .content {
+        display: grid;
+        width: 40rem;
+    }
+
+    .content h1 {
+        font-size: 2.5rem;
+    }
+
+    .content h3 {
+        font-size: 1.5rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+
+    .action-button {
+        padding-top: 4rem;
+
+    }
+
+    .action-button button {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
